@@ -46,7 +46,7 @@ class Pokedex extends Component{
                     }
                     
                 </div>
-                
+                <br/>
             </div>
         )
     }
