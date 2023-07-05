@@ -4,22 +4,16 @@ import './Pokedex.css';
 
 class Pokedex extends Component{
     render(){
-        const firstHand = [
-            {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
-            {id: 7, name: 'Squirtle', type: 'water', base_experience: 63},
-            {id: 11, name: 'Metapod', type: 'bug', base_experience: 72},
-            {id: 12, name: 'Butterfree', type: 'flying', base_experience: 178}
-          ]
-        const secondHand = [
-            {id: 25, name: 'Pikachu', type: 'electric', base_experience: 112},
-            {id: 39, name: 'Jigglypuff', type: 'normal', base_experience: 95},
-            {id: 94, name: 'Gengar', type: 'poison', base_experience: 225},
-            {id: 133, name: 'Eevee', type: 'normal', base_experience: 65}
-        ]
+        const firstHand = this.props.firstHand
+        const secondHand = this.props.secondHand
+        const exp1 = this.props.exp1
+        const exp2 = this.props.exp2
         return(
             <div className="pokedex">
                 <h1>Pokedex</h1>
                 <div>
+                    <h2>{exp1 > exp2 ? "You are a winner!" : "You lost :("}</h2>
+                    <h2>Total Exp: {exp2}</h2>
                     {
                         firstHand.map(hand=>{
                             return <Pokecard 
@@ -33,7 +27,10 @@ class Pokedex extends Component{
                     
                 </div>
                 <br/>
+                
                 <div>
+                    <h2>{exp2 > exp1 ? "You are a winner!" : "You lost :("}</h2>
+                    <h2>Total Exp: {exp2}</h2>
                     {
                         secondHand.map(hand=>{
                             return <Pokecard 
