@@ -12,8 +12,8 @@ class Pokedex extends Component{
             <div className="pokedex">
                 <h1>Pokedex</h1>
                 <div>
-                    <h2>{exp1 > exp2 ? "You are a winner!" : "You lost :("}</h2>
-                    <h2>Total Exp: {exp2}</h2>
+                    <p>{exp1 > exp2 ? "You are a winner!" : "You lost :("}</p>
+                    <p>Total Exp: {exp2}</p>
                     {
                         firstHand.map(hand=>{
                             return <Pokecard 
@@ -29,8 +29,8 @@ class Pokedex extends Component{
                 <br/>
                 
                 <div>
-                    <h2>{exp2 > exp1 ? "You are a winner!" : "You lost :("}</h2>
-                    <h2>Total Exp: {exp2}</h2>
+                    <p>{exp2 > exp1 ? "You are a winner!" : "You lost :("}</p>
+                    <p>Total Exp: {exp2}</p>
                     {
                         secondHand.map(hand=>{
                             return <Pokecard 
