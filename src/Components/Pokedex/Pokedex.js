@@ -12,7 +12,9 @@ class Pokedex extends Component{
             <div className="pokedex">
                 <h1>Pokedex</h1>
                 <div>
-                    <p>{exp1 > exp2 ? "You are a winner!" : "You lost :("}</p>
+                    <h3 className={exp1 > exp2 ? "pokedex-winner" : "pokedex-loser"}>
+                        {exp1 > exp2 ? "You are a winner!" : "You lost :("}
+                    </h3>
                     <p>Total Exp: {exp2}</p>
                     {
                         firstHand.map(hand=>{
@@ -29,7 +31,9 @@ class Pokedex extends Component{
                 <br/>
                 
                 <div>
-                    <p>{exp2 > exp1 ? "You are a winner!" : "You lost :("}</p>
+                    <h3 className={exp2 > exp1 ? "pokedex-winner" : "pokedex-loser"}>
+                        {exp2 > exp1 ? "You are a winner!" : "You lost :("}
+                    </h3>
                     <p>Total Exp: {exp2}</p>
                     {
                         secondHand.map(hand=>{
